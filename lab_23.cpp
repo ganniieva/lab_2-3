@@ -16,11 +16,6 @@ int main() {
     cout << "Введите количество измерений: ";
     cin >> n;
     
-    if (n <= 0) {
-        cout << "Ошибка!" << endl;
-        return 1;
-    }
-    
     float* data = new float[n];
     cout << "Введите значения: ";
     inputData(data, n);
@@ -52,7 +47,7 @@ void inputData(float* p, int n) {
     for (int i = 0; i < n; i++) {
         cin >> *(p + i);
         if (*(p + i) < -50.0 || *(p + i) > 50.0) {
-            cout << "Ошибка! Температура вне диапазона от -50 до +50" << endl;
+            cout << "Ошибка!" << endl;
             exit(1);
         }
     }
